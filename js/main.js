@@ -10,23 +10,23 @@ function FactoryPattern() {
             pattern = new Advanced();
         }
 
-        // //create new pattern based on level
-        // pattern.create = function () {
-        //   //new array for storage data
-        //   var newPattern = [];
-        //   //Array from constructor
-        //   var arrayColors = this.arrayColors;
-        //
-        //   for ( var i = 0; i < arrayColors-1; i++ ) {
-        //     // The following line removes one random element from arr
-        //     // and pushes it onto new pattern
-        //     newPattern.push(arrayColors.splice(Math.floor(Math.random()*arrayColors.length),1)[0]);
-        //   }
-        //   // Push the remaining item onto new pattern
-        //   newPattern.push(arrayColors[0]);
-        //   return newPattern;
-        //   console.log(newPattern);
-        // }
+        //create new pattern based on level
+        pattern.create = function () {
+          //new array for storage data
+          var newPattern = [];
+          //Array from constructor
+          var arrayColors = this.arrayColors;
+
+          for ( var i = 0; i < arrayColors-1; i++ ) {
+            // The following line removes one random element from arr
+            // and pushes it onto new pattern
+            newPattern.push(arrayColors.splice(Math.floor(Math.random()*arrayColors.length),1)[0]);
+          }
+          // Push the remaining item onto new pattern
+          newPattern.push(arrayColors[0]);
+          return newPattern;
+          console.log(newPattern);
+        }
 
         return newPattern;
         console.log(pattern);
